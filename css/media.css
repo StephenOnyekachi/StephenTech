@@ -1,0 +1,210 @@
+@media only screen and (max-width: 800px){
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right: 0;
+        background: #ffffff;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        display: none;
+        margin-right: 0;
+
+        transition: all 0.3s;
+        overflow: scroll;
+    }
+
+    header .navbar ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar ~ label #cancel{
+        display: none;
+    }
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+        right: 0;
+    }
+    #menu-bar:checked ~ label #bars{
+        display: none;
+    }
+    #menu-bar:checked ~ label #cancel{
+        display: block;
+    }
+
+    .welcome{
+        height: 50vh;
+        width: 90%;
+    }
+    .welcome img{
+        width: auto;
+        height: 55vh;
+        position: fixed;
+        top: 5%;
+    }
+    .type{
+        width: 100%;
+        height: 70vh;
+        top: 8%;
+        padding-top: 20px;
+    }
+    .intro{
+        margin: 0 90px;
+    }
+    .intro h3{
+        border: none;
+        width: 100%;
+    }
+    .contact{
+        margin: 20px 60px;
+        width: 70%;
+        padding: 10px;
+        transition: all 5s ease-in-out;
+        align-items: center;
+    }
+    .content{
+        width: 90%;
+        margin: 20px 20px;
+        padding: 10px;
+        float: none;
+    }
+    .content img{
+        width: 300px;
+    }
+    .arrow i{
+        display: none;
+    }
+    header .logo, header h1{
+        font-size: 15px;
+    }
+    .item{width: 100%;
+        top: 5%;
+        padding: 5px;
+        padding-top: 10px;
+    }
+    .items{
+        width: 95%;
+        padding: 5px;
+        margin: 10px 10px;
+    }
+    .items img{
+        height: 210px;
+        width: 300px;
+        margin: 10px 10px;
+    }
+    .items a span{
+        margin: 0px 10px;
+        padding: 5px;
+        font-size: 15px;
+    }
+    .items a i{
+        color: rgb(0, 153, 255);
+        margin: 0px 5px;
+        padding: 10px;
+        font-size: 15px;
+    }
+    .bg{
+        top: 60%;
+    }
+    .last2{
+        width: 90%;
+        margin: 5px 10px;
+        padding: 10px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .last2 input{
+        width: 100%;
+    }
+    .last2 textarea{
+        width: 100%;
+    }
+    .last2 button{
+        width: 100%;
+    }
+    .about{
+        height: 20%;
+        padding-top: 10px;
+    }
+    .about img{
+        width: 300px;
+        margin: 20px 20px;
+    }
+    .adminpost{
+        top: 60px;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        background-color: rgb(236, 254, 255);
+    }
+    .adminpost input{
+        width: 90%;
+    }
+    .adminpost label, .adminpost h2{
+        width: 90%;
+    }
+    .adminpost textarea{
+        width: 90%;
+    }
+    .adminpost button{
+        width: 90%;
+    }
+    .adminposted{
+        position: absolute;
+        top: 70%;
+        width: 100%;
+        transition: all 2s ease-in-out;
+        background-color: white;
+        height: auto;
+        padding: 20px;
+        z-index: 0;
+    }
+    .about2{
+        width: 90%;
+        margin: 20px 20px;
+        padding: 10px;
+        position: relative;
+        top: 30px;
+        left: 0px;
+    }
+
+    .register{
+        width: 90%;
+        margin: 50px 20px;
+        padding: 20px;
+    }
+    .register input{
+        width: 90%;
+        margin: 10px 10px;
+        padding: 10px;
+        outline: none;
+    }
+    .register button{
+        width: 90%;
+        margin: 10px 10px;
+        padding: 10px;
+        outline: none;
+        border: none;
+        background-color: rgb(52, 245, 255);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    }
+}

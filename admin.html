@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <!-- my own linkings -->
+    <link href="css/STEPHEN LOGO2.png" rel="icon">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+
+
+    <style>
+        .bod{
+            padding: 20px;
+            z-index: 0;
+            margin-top: 10mm;
+            bottom: 0px;
+            height: auto;
+            overflow: hidden;
+        }
+        @media only screen and (max-width: 920px){
+            .body{
+                top: 8mm;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 nav">
+            <header>
+                <div class="col-4">
+                    <h1>welcome to <i>Stephen Tech</i></h1>
+                    <!-- <a href="#" class="logo">logo</a> -->
+                </div>
+        
+                <input type="checkbox" id="menu-bar">
+                <label for="menu-bar">
+                    <i class="fa fa-navicon" id="bars" width="50px"></i>
+                    <i class="fa fa-remove" id="cancel" width="50px"></i>
+                </label>
+        
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="home.html">home</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </div>
+
+    <div>
+        <div class="adminpost">
+            <h2>create post</h2><br>
+
+            <input type="file" id="file" style="display: none;">
+            <span for="file" class="upload">upload picture</span><br>
+            <input type="text" placeholder="title"><br>
+            <label>description</label><br>
+            <textarea name="" id="" cols="30" rows="10"> </textarea>
+            <label>cartigory</label><br>
+            <input type="text" placeholder="cartigory"><br>
+            <button>post</button>
+        </div>
+        <div class="adminposted">
+            <div class="posteditem">
+                <h4>always active</h4>
+                <img src="image/program1.png" alt="" width="250px">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, 
+                    deserunt iusto exercitationem quae quibusdam 
+                    fugiat blanditiis doloremque nostrum dolore totam
+                    ad beatae eveniet assumenda voluptatem eos laboriosam voluptatum et tenetur.
+                </p>
+                <a href="">Delet</a>
+            </div>
+            <hr>
+            <div class="posteditem">
+                <h4>always active</h4>
+                <img src="image/program1.png" alt="" width="250px">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, 
+                    deserunt iusto exercitationem quae quibusdam 
+                    fugiat blanditiis doloremque nostrum dolore totam
+                    ad beatae eveniet assumenda voluptatem eos laboriosam voluptatum et tenetur.
+                </p>
+                <a href="">Delet</a>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+
+</div>  
+</body>
+</html>

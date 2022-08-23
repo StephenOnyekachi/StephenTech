@@ -1,0 +1,519 @@
+
+*{
+    margin:0;padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    text-transform: capitalize;
+    text-decoration: none;
+}
+body{
+    min-height: 100vh;
+    background-color: rgb(195, 231, 200);
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    top:0; left: 0;right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo, header h1{
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+}
+header .navbar{
+    margin-right: 110px;
+}
+header .navbar ul{
+    list-style: none;
+}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: #333;
+    display: block;
+}
+header .navbar ul li a:hover{
+    background-color: #333;
+    color: #ffffff;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    color: #ffffff;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+header .navbar ul li ul li ul{
+    left: 200px; 
+    top: 0;
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+    right: 10%;
+}
+.bod{
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+.coin{
+    background: linear-gradient(to right,rgba(159, 216, 53, 0.376), rgba(58, 211, 84, 0.37));
+    border-radius: 10px;
+    width: 29%;
+    margin: 10px 25px;
+    padding: 10px;
+    float: left;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.admin{
+    border-radius: 10px;
+    width: 95%;
+    margin: 10px 25px;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.admin1{
+    border-radius: 10px;
+    width: 95%;
+    margin: 10px 25px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.admin1 h4, .admin1 p, .admin1 span{
+    color: black;
+    padding: 5px 5px;
+}
+.coin1{
+    background: linear-gradient(to right,rgba(159, 216, 53, 0.376), rgba(58, 211, 84, 0.37));
+    border-radius: 10px;
+    width: 46%;
+    margin: 10px 22px;
+    padding: 10px;
+    float: left;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    transition: all 1.5s;
+}
+.coin1:hover{
+    background-color: rgba(65, 85, 45, 0.575);;
+}
+.coins{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    justify-items: center;
+    justify-content: center;
+}
+.coins h3{
+    padding: 10px;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+.coins a h4{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin: 0px 100px;
+}
+.coins i{
+    padding: 15px;
+    color: rgb(224, 255, 51);
+    border: 2px solid rgb(224, 255, 51);
+    border-radius: 50px;
+    justify-content: center;
+    margin: 0px 138px;
+}
+.register{
+    background: linear-gradient(to right,rgba(159, 216, 53, 0.376), rgba(58, 211, 84, 0.37));
+    border-radius: 10px;
+    width: 95%;
+    margin: 50px 30px;
+    padding: 30px 90px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.register p{
+    margin: 10px 10px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+.register h2{
+    margin: 10px 0;
+    padding: 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: blue;
+}
+.up{
+    border: 1px solid #8d8d8d;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+.up p{
+    color: #8d8d8d;
+    font-size: 16px;
+}
+h2{
+    color: rgb(189, 184, 184);
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 2s;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: inherit;
+    color: white;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgba(128, 255, 0, 0.575);
+    /* background-color: linear-gradient(to right,rgba(159, 216, 53, 0.376), rgba(58, 211, 84, 0.37)); */
+    color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    transition: all 1.5s;
+}
+button:hover{
+    background-color: rgba(65, 85, 45, 0.575);
+}
+.pad h3{
+    padding: 10px;
+    color: #ffffff;
+    margin-top: 35px;
+    margin-left: 50x;
+    background-color: rgba(0, 0, 0, 0.582);
+    border-radius: 10px;
+    width: 30%;
+    float: none;
+}
+.pad{
+    padding: 10px;
+    /* color: #ffffff;
+    margin: 0 35px;
+    background-color: rgba(0, 0, 0, 0.747);
+    border-radius: 10px; */
+}
+.footer{
+    background-color: rgb(117, 117, 117);
+    margin-top: 10px;
+    height: auto;
+    display: inline-block;
+    margin: 10px 0;
+    margin-bottom: 0px;
+}
+.foot{
+    width: 30%;
+    margin: 10px 20px;
+    padding: 10px;
+    float: left;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.copy{
+    position: relative;
+    top: 140px;
+    margin-left: -500;
+    /* border: 1px solid white; */
+    padding: 20px;
+    display: inline-block;
+}
+.footer h3{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+}
+
+.footer p{
+    color: rgb(253, 253, 253);
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 5px;
+    background: linear-gradient(to right,rgba(9, 9, 37, 0.376), rgba(54, 54, 54, 0.37));
+    border: 1px solid hsl(0, 1%, 25%);
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.footer p a{
+    color: rgb(253, 253, 253);
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 2s;
+    margin: 0px;
+    margin-bottom: 0px;
+}
+
+.footer p i{
+    margin-right: 2mm;
+    transition: all 2s;
+}
+.type{
+    margin-top: 100px;
+}
+.intro{
+    display: flex;
+    color: rgb(133, 133, 133);
+    margin: 0 40px;
+}
+.typing{
+    margin-left: 10px;
+    color: black;
+}
+.typing::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 5%;
+    border-right: 2px solid black;
+    animation: blink 0.5s infinite ease;  
+}
+
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.chat1{
+    border-radius: 10px;
+    width: 95%;
+    margin: 10px 25px;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: rgb(241, 241, 241);
+    color: black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.chat2{
+    border-radius: 10px;
+    width: 95%;
+    margin: 10px 25px;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: rgb(233, 233, 233);
+    color: black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.chat1 h4, .chat1 p, .chat1 span{
+    color: black;
+    padding: 5px 5px;
+}
+.chat2 h4, .chat2 p, .chat2 span{
+    color: black;
+    padding: 5px 5px;
+}
+.chats{
+    position: fixed;
+    left: 50px;
+    bottom: 0px;
+    padding: 5px;
+    width: 95%;
+}
+.chat{
+    color: black;
+    background-color: none;
+    outline: none;
+}
+.chat input{
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    color: black;
+    background-color: white;
+    outline: none;
+    width: 80%;
+    padding: 5px;
+}
+.chat button{
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    color: black;
+    background-color: white;
+    outline: none;
+    width: 15%;
+    padding: 5px;
+}
+@media only screen and (max-width: 800px){
+    .body{
+        top: 30mm;
+        /* bottom: 20mm; */
+    }
+    .footer{
+        top: 10px;
+        padding: 10px;
+    }
+/* copied */
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right: 0;
+        background: #ffffff;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        display: none;
+        margin-right: 0;
+
+        transition: all 0.3s;
+        overflow: scroll;
+    }
+
+    header .navbar ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar ~ label #cancel{
+        display: none;
+    }
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+        right: 0;
+    }
+    #menu-bar:checked ~ label #bars{
+        display: none;
+    }
+    #menu-bar:checked ~ label #cancel{
+        display: block;
+    }
+    .coin{
+        width: 90%;
+        float: none;
+        margin: 10px 17px;
+        padding: 10px;
+    }
+    .admin{
+        width: 90%;
+        float: none;
+        margin: 10px 17px;
+        padding: 25px;
+    }
+    .admin1{
+        width: 90%;
+        float: none;
+        margin: 25px 17px;
+        padding: 25px;
+    }
+    .coin1{
+        width: 90%;
+        margin: 10px 20px;
+    }
+    .coins{
+        width: auto;
+        margin-left: -55px;
+    }
+    .coins a, .coins h3{
+        padding: 10px;
+        color: white;
+        margin-left: -20px;
+        text-decoration: none;
+    }
+    .coins i{
+        margin: 0px 140px;
+    }
+    .coins a h4{
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        margin: 0px 100px;
+        justify-content: center;
+    }
+    .register{
+        width: 88%;
+        margin: 50px 25px;
+        padding: 10px;
+    }
+    .foot{
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        float: none;
+    }
+    .copy{
+        top: 10px;
+        left: 100;
+        padding: 20px;
+        display: inline-block;
+    }
+    .type{
+        margin-top: 110px;
+    }
+    .intro h1{
+        font-size: 20px;
+    }
+    .typing::after{
+        width: 1px;
+        height: 3%;
+    }
+    .pad h3{
+        padding: 10px;
+        margin-top: 70px;
+        width: 100%;
+    }
+    .chats{
+        left: 20px;
+        width: 90%;
+    }
+}
+

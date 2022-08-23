@@ -1,0 +1,505 @@
+*{
+    margin:0;padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    text-transform: capitalize;
+    text-decoration: none;
+}
+img{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+body{
+    min-height: 100vh;
+    background-color: rgb(195, 231, 200);
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    top:0; left: 0;right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo, header h1{
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+}
+header .navbar{
+    margin-right: 110px;
+}
+header .navbar ul{
+    list-style: none;
+}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: #333;
+    display: block;
+}
+header .navbar ul li a:hover{
+    background-color: #333;
+    color: #ffffff;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    color: #ffffff;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+header .navbar ul li ul li ul{
+    left: 200px; 
+    top: 0;
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+    right: 10%;
+}
+
+.welcome{
+    height: 50vh;
+}
+.welcome img{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 10%;
+}
+
+.type{
+    background-color: rgba(2, 9, 51, 0.692);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+}
+.intro{
+    color: rgb(133, 133, 133);
+    margin: 0 100px;
+    margin-top: 15%;
+}
+.intro h1{
+    font-size: 50px;
+    color: rgb(126, 243, 252);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 5rem;
+}
+.intro h3{
+    text-transform: none;
+    color: rgb(255, 255, 255);
+    font-family: cursive;
+    font-size: 15px;
+}
+.typing{
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 238, 255);
+    letter-spacing: 1.5px;
+}
+.typing::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 5%;
+    border-right: 2px solid rgb(255, 255, 255);
+    animation: blink 0.5s infinite ease;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.contact a{
+    letter-spacing: 2px;
+    font-family: cursive;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    text-align: center;
+    margin: 40px 20px;
+}
+.contact a:hover{
+    color: rgb(177, 175, 175);
+}
+.contact{
+    width: 50%;
+    margin: 40px 300px;
+    padding: 10px;
+    transition: all 5s ease-in-out;
+    align-items: center;
+}
+.contact i{
+    border: 1px solid rgb(0, 238, 255);
+    border-radius: 50px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 238, 255, 0.322);
+    margin: 10px 10px;
+}
+.arrow i{
+    border: 1px solid rgb(0, 238, 255);
+    border-radius: 50px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    /* background-color: rgba(0, 238, 255, 0.322); */
+    margin: 100px 550px;
+    font-weight: bolder;
+    border: 1px solid white;
+    animation: arrow 1s infinite ease;
+}
+@keyframes arrow{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.item{
+    position: absolute;
+    top: 10%;
+    transition: all 2s ease-in-out;
+    background-color: white;
+    height: auto;
+    padding: 20px;
+}
+.items{
+    position: relative;
+    width: 70%;
+    padding:10px;
+    margin: 20px 20px;
+}
+.items h4{
+    font-size: 1.5rem;
+    padding: 10px;
+}
+.items img{
+    height: 250px;
+    width: 300px;
+    margin: 10px 10px;
+}
+.items a span{
+    color: rgb(0, 153, 255);
+    margin: 0px 20px;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.items a i{
+    color: rgb(0, 153, 255);
+    margin: 0px 20px;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.items a i:hover{
+    color: rgb(13, 111, 177);
+}
+.items p{
+    font-size: 1rem;
+    padding: 10px;
+    text-align: justify;
+    margin: 10px 10px;
+}
+
+.bg{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 100%;
+}
+
+.bod{
+    background-color: white;
+    padding-top: 30px;
+}
+.about{
+    transition: all 2s ease-in-out;
+    background-color: rgb(236, 254, 255);
+    height: 20%;
+    padding-top: 20px;
+}
+.about img{
+    width: 300px;
+    margin: 20px 20px;
+}
+.about2{
+    width: 60%;
+    margin: 20px 10px;
+    padding: 10px;
+    position: absolute;
+    top: 70px;
+    left: 350px;
+}
+.about p, .about h4{
+    transition: all 2s ease-in-out;
+    margin: 20px 0;
+}
+.about h4{
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(52, 245, 255);
+}
+.about p{
+    text-align: justify;
+}
+.bod h3, .about h3{
+    text-align: center;
+    padding: 10px;
+    color: rgb(52, 245, 255);
+    font-size: 1.5rem;
+}
+.about h3::before, .about h3::after{
+    content: '_________';
+    border: none;
+    position: relative;
+    top: -10px;
+    background-color: none;
+}
+.bod h3::before, .bod h3::after{
+    content: '_________';
+    border: none;
+    position: relative;
+    top: -10px;
+    background-color: none;
+}
+.content{
+    background-color: rgb(241, 254, 255);
+    width: 23%;
+    margin: 20px 11.5px;
+    font-family: 'Times New Roman', Times, serif;
+    height: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    float: left;
+}
+.content img{
+    width: 250px;
+    height: 200px;
+    margin: 10px 10px;
+}
+.content h4{
+    margin: 5px 5px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: rgb(52, 245, 255);
+}
+.content h4::before, .content h4::after{
+    content: '--';
+    border: none;
+    position: relative;
+    top: -1px;
+    background-color: none;
+}
+.content p{
+    margin: 10px 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    color: rgb(29, 29, 29);
+}
+.last{
+    background-color: white;
+    transition: all 2s ease-in-out;
+    height: 50%;
+    padding: 40px 10px;
+    bottom: 0;
+}
+.last img{
+    width: 300px;
+    margin: 45px 30px;
+}
+.last2{
+    width: 60%;
+    margin: 20px 10px;
+    padding: 25px;
+    position: absolute;
+    top: 820px;
+    left: 350px;
+}
+.last2 input{
+    width: 60%;
+    margin: 10px 10px;
+    padding: 10px;
+    outline: none;
+}
+.last2 label, .last2 h2{
+    width: 60%;
+    margin-left: 10px;
+}
+.last2 textarea{
+    width: 60%;
+    height: 100px;
+    margin: 10px 10px;
+    padding: 10px;
+    outline: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.last2 button{
+    width: 60%;
+    margin: 10px 10px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(52, 245, 255);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.last2 button:hover{
+    background-color: rgb(195, 241, 245);
+}
+.adminposted{
+    position: absolute;
+    top: 8%;
+    width: 70%;
+    right: 0px;
+    transition: all 2s ease-in-out;
+    background-color: white;
+    height: auto;
+    padding: 20px;
+}
+.posteditem{
+    padding: 10px;
+}
+.posteditem h4{
+    font-size: 1.5rem;
+    padding: 10px;
+}
+.posteditem img{
+    height: 250px;
+    width: 300px;
+    margin: 10px 10px;
+}
+.posteditem a{
+    background-color: rgb(255, 0, 0);
+    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    color: black;
+}
+.posteditem a:hover{
+    background-color: rgba(255, 0, 0, 0.425);
+}
+.posteditem p{
+    font-size: 1rem;
+    padding: 10px;
+    text-align: justify;
+    margin: 10px 10px;
+}
+.adminpost{
+    position: fixed;
+    top: 60px;
+    width: 30%;
+    height: 100vh;
+    left: 0;
+    padding: 20px;
+    background-color: rgb(236, 254, 255);
+}
+.adminpost input{
+    width: 80%;
+    margin: 10px 10px;
+    padding: 10px;
+    outline: none;
+}
+.adminpost label, .adminpost h2{
+    width: 60%;
+    margin-left: 10px;
+}
+.adminpost textarea{
+    width: 80%;
+    height: 100px;
+    margin: 10px 10px;
+    padding: 10px;
+    outline: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.adminpost button{
+    width: 80%;
+    margin: 10px 10px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(52, 245, 255);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.adminpost button:hover{
+    background-color: rgb(195, 241, 245);
+}
+.upload{
+    cursor: pointer;
+    margin: 10px 10px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(52, 245, 255);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.upload:hover{
+    background-color: rgb(195, 241, 245);
+}
+
+.register{
+    background-color: #fff;
+    width: 50%;
+    margin: 50px 300px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.register input{
+    width: 60%;
+    margin: 10px 100px;
+    padding: 10px;
+    outline: none;
+}
+.register button{
+    width: 60%;
+    margin: 10px 100px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(52, 245, 255);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.register button:hover{
+    background-color: rgb(195, 241, 245);
+}
+.register a{
+    color: rgb(0, 17, 255);
+}
+
